@@ -5,6 +5,11 @@ TagManager:
   serializedVersion: 3
   tags:
   - Monster
+  - Ground
+  - Score50
+  - Score10
+  - Score1
+  - GameOver
   layers:
   - Default
   - TransparentFX
