@@ -4,12 +4,16 @@
 TagManager:
   serializedVersion: 3
   tags:
+  - Character
+  - Enemy
   - Monster
   - Ground
-  - Score50
   - Score10
-  - Score1
+  - Score30
+  - Score50
   - GameOver
+  - Fruit
+  - Pipe
   layers:
   - Default
   - TransparentFX
