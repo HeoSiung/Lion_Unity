@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 6714701852916315424}
   - component: {fileID: 547850433719846536}
   - component: {fileID: 4408282200823016766}
+  - component: {fileID: 8620730314367207347}
   m_Layer: 8
   m_Name: Chest_Red
   m_TagString: Untagged
@@ -162,3 +163,17 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.95, y: 0.6}
   m_EdgeRadius: 0
+--- !u!114 &8620730314367207347
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2399469608604796370}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: abc74f7392f9149458ba02384e6acbda, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  chestType: 1
+  price: 300

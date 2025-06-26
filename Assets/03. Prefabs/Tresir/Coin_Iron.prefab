@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 5428021749452810588}
   - component: {fileID: 4487139289540897233}
   - component: {fileID: 1791964880308956318}
+  - component: {fileID: 8840367461325886736}
   m_Layer: 8
   m_Name: Coin_Iron
   m_TagString: Untagged
@@ -152,3 +153,17 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0.225}
   m_Radius: 0.225
+--- !u!114 &8840367461325886736
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8226669230592725298}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2140d53ac7801f64092b78d92b7fa529, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  coinType: 2
+  price: 5
