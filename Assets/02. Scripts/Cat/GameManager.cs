@@ -11,7 +11,7 @@ namespace Cat
         public TextMeshProUGUI scoreUI;
 
         private float timer;
-        public static int score; // »ç°ú ¸ÔÀº °¹¼ö
+        public static int score;
         public static bool isPlay;
 
         void Start()

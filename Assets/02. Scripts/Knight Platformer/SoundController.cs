@@ -16,6 +16,8 @@ public class SoundController : MonoBehaviour
 
     private void Awake()
     {
+        DontDestroyOnLoad(gameObject); // 씬을 전환해도 이 게임 오브젝트는 사라지지 마라
+
         bgmVolume.value = bgmAudio.volume;
         eventVolume.value = eventAudio.volume;
 

@@ -18,13 +18,26 @@ public class CatController : MonoBehaviour
     public float jumpPower = 30f;
     public float limitPower = 25f;
 
-    void Start()
+    void Awake() // 1번만 실행
     {
         catRb = GetComponent<Rigidbody2D>();
         catAnim = GetComponent<Animator>();
     }
 
+    void OnEnable() // 켜질때마다 1번씩 실행
+    {
+        transform.localPosition = Vector3.zero; // 고양이 처음 위치
+
+        GetComponent<CircleCollider2D>().enabled = true;
+        soundManager.audioSource.Play();
+    }
+
     void Update()
+    {
+        Jump();
+    }
+
+    private void Jump()
     {
         if (Input.GetKeyDown(KeyCode.Space) && jumpCount < 10)
         {
@@ -55,8 +68,8 @@ public class CatController : MonoBehaviour
             if (GameManager.score == 10) // 사과를 10개 먹어서 성공
             {
                 fadeUI.SetActive(true);
-                fadeUI.GetComponent<FadeRoutine>().OnFade(3f, Color.white);
-                this.GetComponent<CircleCollider2D>().enabled = false;
+                fadeUI.GetComponent<FadeRoutine>().OnFade(3f, Color.white, true);
+                GetComponent<CircleCollider2D>().enabled = false;
 
                 StartCoroutine(EndingRoutine(true));
             }
@@ -71,8 +84,8 @@ public class CatController : MonoBehaviour
 
             gameOverUI.SetActive(true); // 게임 오버 켜기
             fadeUI.SetActive(true); // 페이드 켜기
-            fadeUI.GetComponent<FadeRoutine>().OnFade(3f, Color.black); // 페이드 실행
-            this.GetComponent<CircleCollider2D>().enabled = false;
+            fadeUI.GetComponent<FadeRoutine>().OnFade(3f, Color.black, true); // 페이드 실행
+            GetComponent<CircleCollider2D>().enabled = false;
 
             StartCoroutine(EndingRoutine(false));
         }
@@ -87,12 +100,21 @@ public class CatController : MonoBehaviour
     IEnumerator EndingRoutine(bool isHappy)
     {
         yield return new WaitForSeconds(3.5f);
-        videoManager.VideoPlay(isHappy);
 
-        // yield return new WaitUntil(() => videoManager.vPlayer.isPlaying);
+        videoManager.VideoPlay(isHappy); // 영상 재생 시작
+        yield return new WaitForSeconds(1f);
 
+        var newColor = isHappy ? Color.white : Color.black;
+        fadeUI.GetComponent<FadeRoutine>().OnFade(3f, newColor, false); // 페이드 실행
+
+        yield return new WaitForSeconds(3f);
         fadeUI.SetActive(false);
         gameOverUI.SetActive(false);
-        soundManager.audioSource.mute = true;
+        soundManager.audioSource.Stop();
+
+        transform.parent.gameObject.SetActive(false); // PLAY 오브젝트 Off
     }
 }
+
+
+
