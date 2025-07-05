@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 8d882a91a49dcee44ad6a3c75b5f6963
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 283446
+  packageName: 2D Character Stick 001 by Memstow
+  packageVersion: 1.0.3
+  assetPath: Assets/Memstow/2D Character Stick 001/Scripts/PlayerMove2D.cs
+  uploadId: 667120

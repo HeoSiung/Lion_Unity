@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 672bdcf15d0e21d429341e8412dec8f3
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 283446
+  packageName: 2D Character Stick 001 by Memstow
+  packageVersion: 1.0.3
+  assetPath: Assets/Memstow/2D Character Stick 001/Scripts/CameraMove.cs
+  uploadId: 667120

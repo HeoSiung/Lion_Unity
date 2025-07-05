@@ -6,10 +6,10 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/01. Scenes/Knight Platformer/1. Town.unity
+    path: Assets/01. Scenes/Knight Platformer/0. Town.unity
     guid: 3be76b0650e9e574785a447bbebe23c7
   - enabled: 1
-    path: Assets/01. Scenes/Knight Platformer/2. Platform.unity
+    path: Assets/01. Scenes/Knight Platformer/1. Platform.unity
     guid: 3acefd1a7d459aa4182a9bd242d92daf
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}

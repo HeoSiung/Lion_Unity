@@ -1,6 +1,7 @@
 using System;
 using UnityEngine;
 using UnityEngine.UI;
+using Random = UnityEngine.Random;
 
 public abstract class MonsterCore : MonoBehaviour, IDamageable
 {
@@ -106,10 +107,17 @@ public abstract class MonsterCore : MonoBehaviour, IDamageable
     public void Death()
     {
         isDead = true;
-        animator.SetTrigger("Death");
-        monsterColl.enabled = false;
-        monsterRb.gravityScale = 0f;
+        animator.SetTrigger("Death"); // Death 애니메이션
+        monsterColl.enabled = false; // 또 공격받으면 안되기 때문에 Collider Off
+        monsterRb.gravityScale = 0f; // 아래로 떨어지지 않기 위해서 중력 0
 
-        itemManager.DropItem(transform.position);
+        int itemCount = Random.Range(0, 3); // 0, 1, 2
+        if (itemCount > 0) // 혹시나 0이 나오면 에러가 발생하기 때문에 예외처리
+        {
+            for (int i = 0; i < itemCount; i++) // itemCount 값으로 반복문 실행
+            {
+                itemManager.DropItem(transform.position); // 드롭 아이템 생성
+            }
+        }
     }
 }

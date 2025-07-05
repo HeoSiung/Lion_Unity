@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: 8a58cc88aef01414990e2963409b16cc
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 13804, guid: 0000000000000000e000000000000000, type: 0}
+AssetOrigin:
+  serializedVersion: 1
+  productId: 283446
+  packageName: 2D Character Stick 001 by Memstow
+  packageVersion: 1.0.3
+  assetPath: Assets/Memstow/2D Character Stick 001/UI Toolkit/CharCtrlDisplay.uxml
+  uploadId: 667120
