@@ -16,6 +16,7 @@ TagManager:
   - Pipe
   - Ladder
   - Return
+  - Boat
   layers:
   - Default
   - TransparentFX
